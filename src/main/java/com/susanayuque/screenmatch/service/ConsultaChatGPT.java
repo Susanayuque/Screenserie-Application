@@ -5,6 +5,7 @@ import com.theokanning.openai.service.OpenAiService;
 
 public class ConsultaChatGPT {
     public static String obtenerTraduccion(String texto) {
+        //Apikey modificado a varible de entorno por seguridad
         OpenAiService service = new OpenAiService(System.getenv("API_KEY"));
 
         CompletionRequest requisicion = CompletionRequest.builder()
